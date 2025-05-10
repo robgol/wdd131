@@ -100,10 +100,15 @@ img{
   }
 footer {
 	background: teal;
-	padding: 2rem;
+	padding: 1rem;
 	text-align: center;
 	grid-column: 1 / 4;
+	color: #fff;
 }
+.highlight {
+	color: orange;
+	font-size: smaller;
+  }
 
 .card-large {
 	flex: 2;
@@ -111,8 +116,14 @@ footer {
 
 .card-small {
 	flex: 1;
-
 }
+
+.middle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 80%;
+  }
 
 
   
