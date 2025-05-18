@@ -9,6 +9,8 @@
 
 html,
 body {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -16,13 +18,16 @@ body {
 }
 
 header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     background-color: var(--main);
     color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    position: relative;
 }
 
 h1 {
@@ -90,7 +95,10 @@ h1.show {
 main {
     max-width: 900px;
     margin: 1.5rem auto;
-    padding: 1rem;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    flex-grow: 1;
+    padding: 20 px;
 }
 
 main img {
@@ -120,6 +128,9 @@ figcaption {
 
 footer {
     position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: var(--main);
     color: white;
     text-align: center;
