@@ -1,0 +1,132 @@
+:root {
+    --main: teal;
+    --higlight: rgb(255, 196, 0);
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: var(--main);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+h1 {
+    padding: 1.5rem;
+}
+
+#menuButton {
+    background-color: var(--main);
+    color: white;
+    display: block;
+    font-size: 3rem;
+    text-decoration: none;
+    border: none;
+    padding: 0 .5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 5;
+    right: 1rem;
+}
+
+#menuButton::before {
+    content: "≡";
+}
+
+#menuButton.show::before {
+    content: "X";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: none;
+    font-size: 2rem;
+}
+
+nav a:hover, nav a:active {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+nav a:hover~#navmenu~#hambutton {
+    background-color: var(--higlight);
+    color: #000;
+}
+
+nav.show {
+    width: 100%;
+}
+
+h1.show {
+    display: none;
+}
+
+.show a {
+    display: block;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.temples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+figure {
+    margin-bottom: 1rem;
+}
+
+figcaption {
+    text-align: center;
+    color: var(--main);
+}
+
+footer {
+    position: fixed;
+    background-color: var(--main);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.highlight {
+    font-size: smaller;
+    color: var(--higlight);
+}
