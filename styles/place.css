@@ -157,12 +157,19 @@ h2 {
     right: 1rem;
   }
 
-  .weather h2::after {
-    content: "⛅";
-    position: absolute;
-    right: 3rem;
-    top: 1.25rem;
-  }
+.weather h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 3rem;
+  top: 1.25rem;
+  width: 40px; 
+  height: 40px; 
+  background-image: url("../images/icon.svg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+}
 
   #weather-icon {
     display: none;
