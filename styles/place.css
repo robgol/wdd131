@@ -1,0 +1,170 @@
+:root {
+  --blue: #003893;
+  --white: #ffffff;
+  --red: #CF2027;
+  --yellow: #FFD100;
+  --snow: #FFFBFFff;
+  --main-transparency: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  background-color: var(--blue);
+}
+
+.highlight {
+  color: var(--yellow);
+}
+
+header,
+footer {
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.red {
+  background-color: var(--red);
+  padding: 0.5rem;
+}
+
+.white {
+  background-color: var(--white);
+  padding: 0.5rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--white);
+}
+
+.data {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: auto 1fr;
+  padding: 1rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.value {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.info,
+.weather {
+  text-align: center;
+}
+
+.weather {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.weather svg {
+  width: 100px;
+  height: auto;
+}
+
+.weather-row {
+  padding: 20px;
+}
+
+.weather-row img {
+  height: 100px;
+  width: 100px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.weather-details p {
+  display: contents;
+}
+
+.weather-details strong {
+  text-align: right;
+  color: var(--white);
+  display: block;
+}
+
+.weather-details span {
+  text-align: left;
+  color: var(--white);
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2rem #000;
+    opacity: 0.8;
+  }
+
+  .card h2 {
+    margin: 0.5rem -0.5rem;
+    background-color: var(--yellow);
+    color: var(--white);
+    width: 90%;
+    text-align: left;
+  }
+
+  .info {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+  .weather h2::after {
+    content: "⛅";
+    position: absolute;
+    right: 3rem;
+    top: 1.25rem;
+  }
+
+  #weather-icon {
+    display: none;
+  }
+}
