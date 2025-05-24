@@ -122,6 +122,11 @@ h2 {
   color: var(--white);
 }
 
+#weather-icon {
+  display: none;
+}
+
+
 @media (min-width: 600px) {
   h1 {
     font-size: 3rem;
