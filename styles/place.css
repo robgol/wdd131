@@ -145,7 +145,7 @@ h2 {
   .card h2 {
     margin: 0.5rem -0.5rem;
     background-color: var(--yellow);
-    color: var(--white);
+    color: var(--blue);
     width: 90%;
     text-align: left;
   }
