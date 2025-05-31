@@ -127,6 +127,7 @@ const temples = [
 
 
 const templeContainer = document.querySelector(".temples");
+const mainHeading = document.querySelector("main h2"); 
 
 function displayTemples(filteredTemples) {
   templeContainer.innerHTML = ""; 
@@ -188,13 +189,16 @@ document.querySelectorAll("#navMenu a").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const criteria = event.target.textContent;
+    const criteria = event.target.textContent; 
+    mainHeading.textContent = criteria; 
+
     if (criteria === "Home") {
-      displayTemples(temples);
+      displayTemples(temples); 
     } else {
-      filterTemples(criteria);
+      filterTemples(criteria); 
     }
   });
 });
 
+mainHeading.textContent = "Home"; 
 displayTemples(temples);
