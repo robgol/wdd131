@@ -1,0 +1,31 @@
+/* General Page Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Central Alignment for Main */
+main {
+    flex: 1; /* Allow main to expand and take up available vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* Text Styling */
+p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}

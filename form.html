@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Robson Correia">
+    <meta name="title" content="Product Review Form">
+    <meta name="description" content="Robson Correia's page for Assignment submition on BYU WDD 131 – Dynamic Web Fundamentals course">
+    
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer=""></script>  
+    <script defer src="scripts/form.js"></script>
+    <title>Product Review Form</title>
+
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Form</h1>
+  </header>
+  <main>
+
+    <form action="review.html" name="review" method="get">
+
+      <div class="item">
+        <label for="product_name">Product Name</label>
+        <select id="product_name" name="product_name" required>
+            <option value="" selected disabled>Select a Product ...</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <p>Overall Rating</p>
+        <div class="radio-group">
+          <label for="overall-1">☆</label>
+          <label for="overall-2">☆☆</label>
+          <label for="overall-3">☆☆☆</label>
+          <label for="overall-4">☆☆☆☆</label>
+          <label for="overall-5">☆☆☆☆☆</label>
+          <input type="radio" id="overall-1" name="rating" required="">
+          <input type="radio" id="overall-2" name="rating" required="">
+          <input type="radio" id="overall-3" name="rating" required="">
+          <input type="radio" id="overall-4" name="rating" required="">
+          <input type="radio" id="overall-5" name="rating" required="">
+        </div>
+      </div>
+
+      <div class="item">
+        <label>Date of Installation
+          <input type="date" id="install" name="install" required=""></label>
+      </div>
+
+      <div class="item">
+        <p>Which features did you find useful in the product?<br>
+          <em>(Check all that apply)</em>
+        </p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="durablility" name="durability" value="durability">
+          <label for="durablility">Durability</label>
+          <input type="checkbox" id="ease" name="ease" value="ease">
+          <label for="ease">Ease of Use</label>
+          <input type="checkbox" id="performance" name="performance" value="performance">
+          <label for="performance">Performance</label>
+          <input type="checkbox" id="design" name="design" value="design">
+          <label for="design">Design</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <label for="review">Written Review <span class="smaller">(Optional)</span></label>
+        <textarea id="review" name="review" spellcheck="false" aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings"></textarea>
+      </div>
+
+      <div class="item">
+        <label for="user">Your Name <span class="smaller">(Optional)</span></label>
+        <input type="text" id="user" name="user">
+      </div>
+
+      <input type="submit" value="Post Review">
+
+    </form>
+  </main>
+  <aside class="white"></aside>
+  <aside class="red"></aside>
+  <aside class="white"></aside>
+  <footer>
+    <p><span id="currentYear"></span> 🦈Robson Correia 🦈 Cape Verde</p>
+    <p class="highlight" id="lastModified"></p>
+  </footer>
+
+</body>
+
+</html>
